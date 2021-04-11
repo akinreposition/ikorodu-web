@@ -1,0 +1,89 @@
+@import '../../variables.css';
+
+.main-header {
+	width: 100%;
+	background: black;
+	padding: 8px 20px;
+	text-decoration: none;
+	position: fixed;
+	z-index: 1;
+}
+
+.main-header > div {
+	display: inline-block;
+	vertical-align: middle;
+	
+}
+
+.main-header__brand {
+	color: white;
+	/* color: #2ddf5c; */
+	font-weight: bold;
+	font-size: 22px;
+	margin-left: 100px;
+}
+
+.main-nav {
+	display: inline-block;
+    /* width: calc(100% - 74px); */
+    width: auto;
+	vertical-align: middle; 
+	/* margin-left: 772px; */
+	padding-left: 772px;
+}
+
+.main-nav__items {
+    margin-left: 672px;
+    text-align: right;
+	padding: 0;
+    list-style: none;
+    /* justify-items: auto; */
+}
+
+.main-nav__item {
+	display: inline-block;
+	margin: 0 46px;
+
+}
+
+.main-nav__item a {
+	text-decoration: none;
+	color: #0066F5;
+	font-weight: bold;
+	padding: 3px 0;
+}
+
+.main-header__brand a:hover,
+.main-header__brand a:active {
+	color: #0066F5;
+}
+.main-nav__item a:hover,
+.main-nav__item a:active {
+	color: white;
+	border-bottom: 2px dotted white;
+}
+
+
+/*p::first-letter {
+	color: red;
+	font-size: 20px;
+}*/
+
+/*.main-nav__item a::after {
+	content: " (Link)";
+	color: orange;
+}*/
+
+.main-nav__item--cta a{
+	color: white;
+	background: #FFC400;
+	padding: 8px 16px;
+	border-radius: 8px;
+}
+
+.main-nav__item--cta a:hover,
+.main-nav__item--cta a:active {
+	color: #FFC400;
+	background: white;
+	border: none;
+}
