@@ -1,16 +1,16 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-
+import React from 'react'
+import { Link } from 'react-router-dom'
+import LogoAutomain from '../../assets/LogoAutomain.png'
 
 const Navbar = () => {
     return (
             <nav className="main-header">
                 <div className="main-header__brand">
-                    <Link to='/'>IKORODU</Link>
+                    <Link to='/'><img src={LogoAutomain} alt="Ikorodu Oga"/></Link>
                 </div>  
                 <div>
                 <ul className="main-nav main-nav__items">
-                        <li class="main-nav__item">
+                        <li className="main-nav__item">
                             <Link to='/enviroments'>Enviroments</Link>
                         </li>
                         <li className="main-nav__item">

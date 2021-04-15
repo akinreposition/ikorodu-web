@@ -1,10 +1,12 @@
 import React from 'react'
+import Backdrop from '../components/features/backdrop'
 
 const  LandingPage = () => {
     return (
         <main>
+            <Backdrop />
             <section id="product-overview">
-	    		<h1>Get the freedom you deserve.</h1>
+	    		<h1>Elegnance In Productivity.</h1>
     		</section>
             <section id="plans">
                 <h1 className="section-title">Choose Your plan</h1>

@@ -4,7 +4,7 @@ import React from 'react'
 const NotFound = () => {
   return (
     <div
-      class='container not-found center-text'
+      className='container not-found center-text'
       style={{ fontFamily: 'Josefin Sans' }}
     >
       <div className='not-found-50'>
