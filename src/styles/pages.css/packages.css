@@ -1,4 +1,6 @@
 
+main { padding-top: 2rem; }
+
 .background {
 	background: url("../../assets/plans-background.jpg") center/cover; 
 	/* background-image: linear-gradient(50deg,pink,red, blue,yellow,orange,brown,green,white); */
@@ -9,7 +11,7 @@
 	z-index: -1;
 }
 .package {
-	margin: 16px 0;
+	margin: 1rem 0;
 	background: #d5ffdc;
 	border: 3px solid #0e4f1f;
 	border-radius: 4px;
@@ -26,16 +28,18 @@
 	text-decoration: none;
 	color: inherit;
 	display: block;
-	padding: 32px;
+	padding: 2rem;
 }
 
 .package__badge {
-	right: 0;
 	position: absolute;
+	top: 0;
+	right: 0;
+	margin: 1.2rem;
 	font-size: 12px;
 	color: white;
 	background: #979797;
-	padding: 8px;
+	padding: 0.5rem;
 } 
 
 .package__title {
@@ -76,10 +80,6 @@
 	background: rgba(14, 79, 31, 0.95);
 }
 
-#premium .package__title {
-	color: white;
-}
+#premium .package__title {	color: white; }
 
-#premium .package__subtitle {
-	color: #bbb;
-}
+#premium .package__subtitle { color: #bbb; }

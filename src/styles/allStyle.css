@@ -6,3 +6,8 @@
 @import './pages.css/404.css';
 @import './pages.css/packages.css';
 @import './pages.css/news.css';
+@import './modules/box-model.css';
+@import './modules/button.css';
+@import './modules/grid.css';
+@import './modules/module.css';
+@import './modules/text.css';
