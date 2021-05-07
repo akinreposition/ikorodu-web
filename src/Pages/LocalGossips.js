@@ -1,8 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import Backdrop from '../components/features/backdrop'
+import Backdrop from '../components/features/Backdrop.js'
 
-const Packages = () => {
+const LocalGossips = () => {
     return (
         <div>
             <Backdrop />
@@ -37,4 +37,4 @@ const Packages = () => {
      )
 }
 
-export default Packages
+export default LocalGossips

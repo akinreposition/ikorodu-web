@@ -1,4 +1,4 @@
 import React from 'react'
 
-const backdrop = () => <div className="backdrop"></div>
-export default backdrop
+const Backdrop = () => <div className="backdrop"></div>
+export default Backdrop

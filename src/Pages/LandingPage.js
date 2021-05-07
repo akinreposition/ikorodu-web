@@ -1,5 +1,5 @@
 import React from 'react'
-import Backdrop from '../components/features/backdrop'
+import Backdrop from '../components/features/Backdrop'
 
 const  LandingPage = () => {
     return (
