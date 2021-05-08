@@ -1,33 +1,39 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
-// import LogoAutomain from '../../assets/LogoAutomain.png'
+// import AutomainLogo from '../../assets/logo.png'
 
 
-export const DesktopNavbar = () => {
-    return (
-        <nav className="main-header">
-                <div className="main-header__brand">
-                <Link to='/'>CDA</Link>
-                    {/* <Link to='/'><img src={LogoAutomain} alt="Nature from Top"/></Link> */}
-                </div>  
-                <div>
-                <ul className="main-nav main-nav__items">
-                        <li className="main-nav__item">
-                            <Link to='/cda'>CDA's</Link>
-                        </li>
-                        <li className="main-nav__item">
-                            <Link to="/contact-us">Contact us</Link>
-                        </li>
-                        <li className="main-nav__item">
-                            <Link to="/services">Services</Link>
-                        </li>
-                        <li className="main-nav__item main-nav__item--cta">
-                            <Link to="/news">Local Gossips</Link>
-                        </li>
-                   </ul>  
-                </div>          
-	        </nav>
-    )
+export const DesktopNavbar = ({ icon }) => {  
+  return (
+    <nav className='navbar'>
+      <div className='logo'>
+        <Link to='/'>
+          <i className={icon} />
+          <span className='text-blue'>Home
+            {/* <img src={AutomainLogo} alt='CDA Official Logo' /> */}
+          </span>
+        </Link>
+      </div>
+      <div className='navbar-main'>
+           <div className="navbar-natural">
+              <div className='navbar-text'>
+          <ul>
+            <li>
+              <Link to='/cda'>CDA's</Link>
+            </li>
+            <li>
+              <Link to='/services'>Services</Link>
+            </li>
+            <li>
+              <Link to='/contact-us'>Contact Us</Link>
+            </li>
+          </ul>
+        </div>
+        <Link to='/news'>
+          <button className='navbar-button'>Local Gossips</button>
+        </Link>
+          </div>     
+      </div>
+    </nav>
+  )
 }
-
-export default DesktopNavbar
