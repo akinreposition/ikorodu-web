@@ -1,0 +1,11 @@
+// style content to the TimedPopupContent
+
+.popContent{
+    width: auto;
+    margin-left: 50px;
+    margin-top: 10px;
+    font-family: Manrope, sans-serif;
+    &-header {
+        font-size: medium;
+    }
+}

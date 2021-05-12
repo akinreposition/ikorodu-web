@@ -1,13 +1,19 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Backdrop from '../components/features/Backdrop'
+import SectionOne from '../components/home/SectionOne'
+import TimedPopup from '../components/Popup'
+import { TimedPopupContent } from '../components/Popup/TimedPopupContent'
+
 
 const  LandingPage = () => {
+    const [popupState, setState] = useState(true)
     return (
         <main>
+            <TimedPopup trigger={() => setState(true)} state={popupState}>
+                <TimedPopupContent />
+            </TimedPopup>
             <Backdrop />
-            <section id="product-overview">
-	    		<h1>Elegnance In Productivity.</h1>
-    		</section>
+            <SectionOne />
             <section id="plans">
                 <h1 className="section-title">Choose Your plan</h1>
                 <div className="plan__list">
