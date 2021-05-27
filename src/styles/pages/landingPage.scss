@@ -15,7 +15,11 @@
     margin-top: -33px;
 }
 
-.section-title { color: #2ddf5c; text-align: center ;}
+.section-title { 
+	margin: 2%;
+	color: #2ddf5c; 
+	text-align: center;
+}
 
 #product-overview h1 {
     color: white;
@@ -51,6 +55,7 @@
 	color:  #19b84c;
 	background: white;
 	padding: 8px;
+	margin-bottom: 5%;
 	box-shadow: 2.5px 2.5px 3px 3px rgba(1,1,1,0.5);
 	border-radius: 4px;
 }
@@ -75,7 +80,7 @@
 
 #key-features {
 	/* background: #ff1b68; */
-	background-image: radial-gradient(circle at 50% 40%,pink,red, blue,yellow,brown,white);
+	background-image: radial-gradient(circle at 50% 40%,#024216,#04db48);
 	margin-top: 80px;
 	padding: 16px;
 }
@@ -97,21 +102,44 @@
 	vertical-align: top;
 }
 
-.key-feature__img {
-	/*background: #ffcede;*/
-	background: url("../../assets/yorubaDrummer.jpg");
+.key-feature__svg {
+	background: white;
 	background-size: cover;
 	width: 128px;
 	height: 128px;
-	border: 2px solid #424242;
+	border: 2px solid #ffcede;
 	border-radius: 50%;
-	outline: none;
 	margin: auto;
 }
 
 .key-feature__description {
 	text-align: center;
 	font-weight: bold;
-	color: #ffcede;
+	/* color: #ffcede; */
+	color: white;
 	font-size: 20px;
+}
+
+@media (max-width: 850px){
+	.plan {
+		background-color: #d5ffdc;
+		margin: 8px;
+		width: auto;
+	}
+	.plan--highlighted {
+		background: #19b84c;
+		color: white;
+		box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.5);
+	}
+	.key-feature {
+		margin-top: 7%;
+		margin-left: 20%;
+		width: 60%;		
+	}
+	.key-feature__description {
+		text-align: center;
+	}
+	.key-feature__svg {
+		margin-top: 5%;
+	}
 }

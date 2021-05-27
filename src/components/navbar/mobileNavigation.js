@@ -1,18 +1,15 @@
 import React, { useContext, useState } from 'react'
 import { Link } from 'react-router-dom'
-// import AutomainLogo from '../../assets/logo.png'
+import nigeriaSvgrepo from '../../assets/svgs/nigeriaSvgrepo.svg'
 
-export const MobileNavigation = ({ icon }) => {
+export const MobileNavigation = () => {
   const [active, setActive] = useState(false)  
   return (
     <div className='mobile-navigation'>
       <div className='logo'>
-        <Link to='/'>
-          <i className={icon} />
-          <span className='text-blue'>
-              CDA
-            {/* <img src={AutomainLogo} alt='CDA Official Logo' /> */}
-          </span>
+      <Link to='/'>
+          {/* <i className={icon} /> */}
+          <img src={nigeriaSvgrepo} width="80px" height="40px" alt='CDA Official Logo' />
         </Link>
       </div>
         <div>

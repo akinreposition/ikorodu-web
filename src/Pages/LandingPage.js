@@ -1,63 +1,73 @@
-import React, { useState } from 'react'
-import Backdrop from '../components/features/Backdrop'
+import React, { useState, useEffect } from 'react'
+// import Backdrop from '../components/features/Backdrop'
+import battery from '../assets/svgs/battery.svg'
+import compressor from '../assets/svgs/compressor.svg'
 import SectionOne from '../components/home/SectionOne'
 import TimedPopup from '../components/Popup'
 import { TimedPopupContent } from '../components/Popup/TimedPopupContent'
 
 
+
 const  LandingPage = () => {
-    const [popupState, setState] = useState(true)
+    const [popupState, setState] = useState(true)      // useState should remain true because of the pop info
+    useEffect(()=> {
+        setTimeout(() => {
+        setState(false);
+        }, 3000)
+    }, []);
     return (
         <main>
             <TimedPopup trigger={() => setState(true)} state={popupState}>
                 <TimedPopupContent />
             </TimedPopup>
-            <Backdrop />
+            {/* <Backdrop /> */}
             <SectionOne />
             <section id="plans">
-                <h1 className="section-title">Choose Your plan</h1>
+                <h1 className="section-title">Discover Your Community</h1>
                 <div className="plan__list">
                     <article className="plan">
-                        <h1 className="plan__title">FREE</h1>
-                        <h2 className="plan__price">$0/month</h2>
-                        <h3>For hobby projects or small teams.</h3>
+                        <h1 className="plan__annotation">HOUSES</h1>
+                        <h1 className="plan__title">Find Your community</h1>
+                        {/* <h2 className="plan__price">FREE</h2>
+                        <h3>For hobby projects or small teams.</h3> */}
                         <ul className="plan--features">
-                            <li>1 Workspace</li>
-                            <li>Unlimited Traffic</li>
-                            <li>10GB Storage</li>
-                            <li>Basic Support</li>
+                            <li>Find Address</li>
+                            <li>Security Gist</li>
+                            <li>Find Next Kiosk</li>
+                            <li>Basic Support For Hustle</li>
                         </ul>
                         <div>
-                            <button className="button">CHOOSE PLAN</button>
+                            <button className="button">Discover More</button>
                         </div>
                     </article>
                     <article className="plan plan--highlighted">
-                        <h1 className="plan__annotation">RECOMMENDED</h1>
-                        <h1 className="plan__title">PLUS</h1>
-                        <h2 className="plan__price">$29/month</h2>
-                        <h3>For ambitious projects.</h3>
+                        <h1 className="plan__annotation">BUSINESS</h1>
+                        <h1 className="plan__title">MSME AROUND YOU</h1>
+                        {/* <h2 className="plan__price">$29/month</h2> */}
                         <ul className="plan--features">
-                            <li>5 Workspaces</li>
-                            <li>Unlimited Traffic</li>
-                            <li>100GB Storage</li>
-                            <li>Plus Support</li>
+                            <li>For ambitious projects</li>
+                            <li>Available Workspaces</li>
+                            <li>Find Local Professional</li>
+                            <li>Formal & Informal Education</li>
+                            <li>Transportation</li>
                         </ul>
                         <div>
-                            <button className="button">CHOOSE PLAN</button>
+                            <button className="button">Discover More</button>
                         </div>
                     </article>
                     <article className="plan">
-                        <h1 className="plan__title">PREMIUM</h1>
-                        <h2 className="plan__price">$99/month</h2>
-                        <h3>Your enterprise solution.</h3>
+                        <h1 className="plan__annotation">HEALTH CARE</h1>
+                        <h1 className="plan__title">Your Health Care Finder.</h1>
+                        {/* <h2 className="plan__price">PREIMUM</h2>
+                        <h3>Your Health Care Finder.</h3> */}
                         <ul className="plan--features">
-                            <li>10 Workspace</li>
-                            <li>Unlimited Traffic</li>
-                            <li>Unlimited Storage</li>
-                            <li>Priority Support</li>
+                            <li>Health Care Center</li>
+                            <li>Traditional Care Giver</li>
+                            <li>Pharmacy</li>
+                            <li>Specialities Support Center</li>
                         </ul>
                         <div>
-                            <button className="button">CHOOSE PLAN</button>
+                            <button className="button">Discover More</button>
                         </div>
                     </article>
                 </div>
@@ -66,27 +76,31 @@ const  LandingPage = () => {
                 <h1 className="section-title">Many Good Reasons to Stick Around</h1>
                 <ul className="key-features__list">
                     <li className="key-feature">
-                        <div className="key-feature__img">
-                            
+                        <div className="key-feature__svg">
+                            <img src={compressor} width='128px'
+                            height='128px' alt="Houses"/>
                         </div>
-                        <p className="key-feature__description">3,857,000 Trusting Customers</p>
+                        <p className="key-feature__description"> Reduced Travel Time</p>
                     </li>
                     <li className="key-feature">
-                        <div className="key-feature__img">
-                            
+                        <div className="key-feature__svg">
+                        <img src={battery} width='124px'
+                            height='124px' alt="Business"/>
                         </div>
-                        <p className="key-feature__description">99.999% Uptime Guarantee</p>
+                        <p className="key-feature__description"> Improve Economic Activities</p>
                     </li>
                     <li className="key-feature">
-                        <div className="key-feature__img">
-                            {/* <img src="alexander.jpg" width="128px" height="128px" border-radius="50%"> */}
+                        <div className="key-feature__svg">
+                        <img src={compressor} width='128px'
+                            height='128px' alt="Health"/>
                         </div>
-                        <p className="key-feature__description">Lightning Fast CDN</p>
+                        <p className="key-feature__description">Improve Trust & Mortality Rate</p>
                     </li>
                 </ul>
             </section>
         </main>
     )
+    
 }
 
 export default LandingPage

@@ -1,17 +1,15 @@
 import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
-// import AutomainLogo from '../../assets/logo.png'
+import nigeriaSvgrepo from '../../assets/svgs/nigeriaSvgrepo.svg'
 
 
-export const DesktopNavbar = ({ icon }) => {  
+export const DesktopNavbar = () => {  
   return (
     <nav className='navbar'>
       <div className='logo'>
         <Link to='/'>
-          <i className={icon} />
-          <span className='text-blue'>Home
-            {/* <img src={AutomainLogo} alt='CDA Official Logo' /> */}
-          </span>
+          {/* <i className={icon} /> */}
+          <img src={nigeriaSvgrepo} width="80px" height="40px" alt='CDA Official Logo' />
         </Link>
       </div>
       <div className='navbar-main'>

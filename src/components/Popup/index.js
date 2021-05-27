@@ -1,11 +1,6 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 const TimedPopup = ({ trigger, state, children }) => {
-    const [TimedPopup, setTimedPopup] = useState(false);
-  useEffect(()=> {
-      setTimeout(() => {
-      setTimedPopup(true);
-      }, 3000)
-  }, []);
+    // const [TimedPopup, setTimedPopup] = useState(false);
 
   return state ? (
     <div className='popup-layout'>
