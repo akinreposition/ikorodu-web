@@ -48,7 +48,7 @@ const  LandingPage = () => {
                             <li>For ambitious projects</li>
                             <li>Available Workspaces</li>
                             <li>Find Local Professional</li>
-                            <li>Formal & Informal Education</li>
+                            <li>Formal and Informal Education</li>
                             <li>Transportation</li>
                         </ul>
                         <div>
