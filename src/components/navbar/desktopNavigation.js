@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
 import nigeriaSvgrepo from '../../assets/svgs/nigeriaSvgrepo.svg'
 
@@ -17,7 +17,7 @@ export const DesktopNavbar = () => {
               <div className='navbar-text'>
           <ul>
             <li>
-              <Link to='/cda'>CDA's</Link>
+              <Link to='/lcda'>LCDA</Link>
             </li>
             <li>
               <Link to='/services'>Services</Link>

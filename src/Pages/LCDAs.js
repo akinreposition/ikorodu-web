@@ -1,13 +1,13 @@
 import React from 'react'
 import Backdrop from '../components/features/Backdrop'
 
-const CDAs = () => {
+const LCDA = () => {
     return (
         <div>
             <Backdrop />
-            <h1> This page deals with all major local areas within CDAs</h1>
+            <h1> This page deals with all major local areas within a local govt</h1>
         </div>
     )
 }
 
-export default CDAs
+export default LCDA

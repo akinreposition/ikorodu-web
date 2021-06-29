@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import nigeriaSvgrepo from '../../assets/svgs/nigeriaSvgrepo.svg'
 
@@ -22,7 +22,7 @@ export const MobileNavigation = () => {
         <div className='navbar-text'>
           <ul>
             <li>
-                <Link to='/cda'>CDA's</Link>
+                <Link to='/lcda'>LCDA</Link>
             </li>
             <li>
             <Link to="/contact-us">Contact us</Link>
