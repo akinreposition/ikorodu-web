@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react'
 import SectionOne from '../components/home/sectionOne'
 import SectionTwo from '../components/home/sectionTwo'
 import SectionThree from '../components/home/sectionThree'
+import Form from '../components/home/Form'
 import TimedPopup from '../components/Popup'
 import { TimedPopupContent } from '../components/Popup/TimedPopupContent'
 
@@ -24,6 +25,7 @@ const  LandingPage = () => {
             <SectionOne />
             <SectionTwo />
             <SectionThree />
+            <Form />
         </main>
     )
     
