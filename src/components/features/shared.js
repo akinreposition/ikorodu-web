@@ -16,13 +16,6 @@
              backdrop.classList.add('open');
         });
     }
-    backdrop.addEventListener("click", function(){
-        // mobileNav.style.display = 'none';
-        mobileNav.classList.remove('open');
-        closeModal();
-    });
-
-    modalNoButton.addEventListener("click", closeModal);
 
     const closeModal = () => {
         // backdrop.style.display = "none";
@@ -30,6 +23,14 @@
         modal.classList.remove('open');
         backdrop.classList.remove('open');
     }
+
+    backdrop.addEventListener("click", function(){
+        // mobileNav.style.display = 'none';
+        mobileNav.classList.remove('open');
+        closeModal();
+    });
+
+    modalNoButton.addEventListener("click", closeModal);
 
     toggleButton.addEventListener('click', function(){
         // mobileNav.style.display= 'block';

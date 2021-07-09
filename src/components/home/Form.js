@@ -9,6 +9,7 @@ const Form = () => {
   //   e.preventDefault();
   //   // const data = { fullName,phoneNumber,message};
   // }
+ 
   return (
     <div className='form-area'>
       <div className='home-form'>
