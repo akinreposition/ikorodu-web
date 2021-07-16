@@ -10,15 +10,15 @@ export const dummyData = [
         website: "semicolon.africa",
         weblink: "www.semicolon.africa",
         newsText: "Fashionista with a great eye for beauty",
-        imgScr: Cynthia,
+        imgSrc: Cynthia,
     },
     {
         title: "Taver Mellow",
         subtitle: "Cyber-Security expert.",
         website: "facebook",
-        weblink: "www.feacebook.com",
+        weblink: "www.facebook.com",
         newsText: "I worked as a cyber security expert and a Data Engineer.",
-        imgScr: Taver
+        imgSrc: Taver
     },
     {
         title: "Customer1",
@@ -26,7 +26,7 @@ export const dummyData = [
         website: "google.africa",
         weblink: "www.google.com",
         newsText: "great eye for codes",
-        imgScr: Customer1,
+        imgSrc: Customer1,
     },
     {
         title: "Customer2",
@@ -34,7 +34,7 @@ export const dummyData = [
         website: "TechCabal.com",
         weblink: "www.techcabal.com",
         newsText: "I worked as a DevOps expert and a Data Scientist.",
-        imgScr: Customer2
+        imgSrc: Customer2
     },
 ]
 /**

@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react'
+import Navbar from '../components/navbar/Navbar'
+import Footer from '../components/footer/Footer'
 // import Backdrop from '../components/features/Backdrop'
 import SectionOne from '../components/home/sectionOne'
 import SectionTwo from '../components/home/sectionTwo'
@@ -17,16 +19,20 @@ const  LandingPage = () => {
         }, 4000)
     }, []);
     return (
-        <main>
-            <TimedPopup trigger={() => setState(true)} state={popupState}>
-                <TimedPopupContent />
-            </TimedPopup>
-            {/* <Backdrop /> */}
-            <SectionOne />
-            <SectionTwo />
-            <SectionThree />
-            <Form />
-        </main>
+        <>
+            <Navbar/>
+            <main>
+                <TimedPopup trigger={() => setState(true)} state={popupState}>
+                    <TimedPopupContent />
+                </TimedPopup>
+                {/* <Backdrop /> */}
+                <SectionOne />
+                <SectionTwo />
+                <SectionThree />
+                <Form />
+                <Footer/>
+            </main>
+        </>
     )
     
 }

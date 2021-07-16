@@ -1,43 +1,32 @@
 import React from 'react';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  // Redirect,
-} from 'react-router-dom'
-import Navbar from './components/navbar/Navbar';
-import LandingPage from './Pages/LandingPage'
-import LCDAs from './Pages/LCDAs';
-import LocalGossips from './Pages/LocalGossips'
-import ContactUs from './Pages/ContactUs';
-import Services from './Pages/Services';
-import Communities from './Pages/Communities.js';
-import MSMEs from './Pages/MSMEs';
-import Health from './Pages/Health';
-import Footer from './components/footer/Footer'
-import NotFound from './Pages/NotFound'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import { PrivateRoute } from './Routes/PrivateRoute.js';
+import { PublicRoute } from './Routes/PublicRoute.js'
+import { Provider } from 'react-redux';
+import { AuthContextProvider } from './authentication/AuthContext.js';
+import store from './store'
+import routes from './routes';
+import NotFound from './pages/NotFound'
 import './App.scss';
-
-
-
 
 const App = () => {
   return(
-    <Router>
-        <Navbar />
-         <Switch>
-                <Route exact path='/' component={LandingPage}/>
-                <Route exact path='/lcda' component={LCDAs}/>
-                <Route exact path='/news' component={LocalGossips}/>
-                <Route exact path='/contact-us' component={ContactUs}/>
-                <Route exact path='/services' component={Services}/>
-                <Route exact path='/communities' component={Communities}/>
-                <Route exact path='/communities/msme' component={MSMEs}/>
-                <Route exact path="/communities/health" component={Health}/>
+    <Provider store={store}>
+      <AuthContextProvider>
+        <Router>
+            <Switch>
+                {routes.map((route, i) =>{
+                  if(route.isPrivate){
+                    return <PrivateRoute key={i} {...route}/>
+                  } else {
+                    return <PublicRoute key={i} {...route}/>
+                  }
+                })}
                 <Route component={NotFound} />
-         </Switch>
-        <Footer />
-    </Router>
+            </Switch>
+        </Router>
+      </AuthContextProvider>
+    </Provider>
   )
 }
 

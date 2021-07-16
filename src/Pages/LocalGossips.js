@@ -1,15 +1,18 @@
 import React, { Fragment } from 'react'
 import { dummyData } from '../components/localGossips/helper'
-import LeftContainer from '../components/localGossips/leftContainer'
-// import Container from '../components/localGossips/index'
+import Container from '../components/localGossips/Container'
+import Navbar from '../components/navbar/Navbar'
+import Footer from '../components/footer/Footer'
 const LocalGossips = () => {
     return ( 
         <Fragment>
+            <Navbar/>
             <div>
                 {dummyData.map(data => (
-                    <LeftContainer {...data} key={data.title}/>
+                    <Container {...data} key={data.title}/>
                 ))}
             </div>
+            <Footer/>
         </Fragment>
      )
 }
