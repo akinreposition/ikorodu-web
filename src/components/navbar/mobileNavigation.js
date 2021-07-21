@@ -25,10 +25,10 @@ export const MobileNavigation = () => {
                 <Link to='/lcda'>LCDA</Link>
             </li>
             <li>
-            <Link to="/contact-us">Contact us</Link>
+            <Link to="/services">Services</Link>
             </li>
             <li>
-            <Link to="/services">Services</Link>
+            <Link to="/contact-us">Contact us</Link>
             </li>
           </ul>
         </div>

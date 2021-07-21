@@ -9,16 +9,16 @@ import Health from './pages/Health';
 
 export default [
     {
-        path: '/news',
-        name: 'Local Gossips',
-        component: LocalGossips,
-        isPrivate: false,
-    },
-    {
         path: '/',
         name: 'Home',
         component: LandingPage,
         isPrivate: false
+    },
+    {
+        path: '/news',
+        name: 'Local Gossips',
+        component: LocalGossips,
+        isPrivate: false,
     },
     {
         path: '/lcda',
