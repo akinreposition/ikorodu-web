@@ -1,0 +1,120 @@
+@import '../../variables.scss';
+
+.form-header {
+  width: 50%;
+  height: 49px;
+  margin-top: 30px;
+  margin-left: -70px;
+  font-family: Comfortaa;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 49px;
+  text-transform: capitalize;
+  color: var(--black-color);
+  align-self: center;
+  @media (max-width: 500px) {
+    font-size: 24px;
+    margin-left: 56%;
+    width: 100%;
+  }
+}
+
+.input-field {
+  position: relative;
+  width: 22.875rem;
+  height: 44px;
+  border: 1px solid var(--white3-color);
+  border-radius: 5px;
+  padding: 10px;
+  &:hover,
+  &:focus,
+  &:active {
+    border: 1px solid black;
+  }
+}
+.textarea-field {
+  position: relative;
+  width: 22.875rem;
+  border: 1px solid var(--white3-color);
+  border-radius: 5px;
+  padding: 10px;
+  min-height: 200px;
+  &:hover,
+  &:focus,
+  &:active {
+    border: 1px solid black;
+  }
+}
+.input-box {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  font-size: 1.125rem;
+  font-family: Comfortaa;
+  color: var(primary-grey);
+  transition: 0.3s ease-in;
+  &:hover,
+  &:focus,
+  &:active {
+    border: none !important;
+  }
+}
+
+.text-box {
+  @extend .input-box;
+  min-height: 185px;
+}
+.input-field > label {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  font-family: Josefin Sans;
+  font-size: 1.125rem;
+  line-height: 18px;
+  text-transform: capitalize;
+  color: var(--primary-grey);
+  pointer-events: none;
+  transition: 0.3s ease-in;
+}
+.textarea-field > label {
+  position: absolute;
+  top: 15%;
+  left: 20px;
+  transform: translateY(-50%);
+  font-family: Josefin Sans;
+  font-size: 1.125rem;
+  line-height: 18px;
+  text-transform: capitalize;
+  color: var(--primary-grey);
+  pointer-events: none;
+  transition: 0.3s ease-in;
+}
+.input-field input:focus ~ label,
+.input-field input:valid ~ label {
+  top: 0%;
+  font-size: 1rem;
+  color: black;
+  background: var(--white-color);
+  transform: translateY(-50%);
+}
+.textarea-field textarea:focus ~ label,
+.textarea-field textarea:valid ~ label {
+  top: 0%;
+  font-size: 1rem;
+  color: black;
+  background: var(--white-color);
+  transform: translateY(-50%);
+}
+
+@media (max-width: 650px) {
+  .textarea-field {
+    width: 100%;
+  }
+  /* .input-box, .text-box {
+     margin-left: 0% !important;
+  } */
+}

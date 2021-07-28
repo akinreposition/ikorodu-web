@@ -1,0 +1,102 @@
+$gen-width: 430px;
+/* Utilities */
+.container {
+    max-width: 1100px;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 2rem;
+  }
+  .signin {
+      height: 92vh;
+      height: calc(100vh - 65px);
+      overflow:visible;
+      grid-gap: 0;
+      /* &-grid {
+          &__blue {
+              width: 100%;
+              min-height: 100%;
+              display: flex;
+              align-items: flex-end;
+              background: var(--light-green);
+          }
+          &__white {
+              @include module-display-matrix(flex, column, 2, flex-start, flex-end, null, null);
+              height: 100%;
+              background: var( --white-color);
+              width: 100%;
+              padding: 0 50px;
+          }
+      } */
+      &-welcomeText {
+          width: 100%;               
+          font-family: Cardo;
+          font-weight: normal;
+          font-size: 3rem;        
+          text-transform: capitalize;
+          color: var( --white-color);
+          text-align: center;
+      }
+      &-accountExists {        
+          margin-top: 43px;
+          margin-left: 110px;        
+          font-family: Josefin Sans;
+          font-size: 14px;
+          font-weight: normal;        
+          text-transform: capitalize;
+          color: var(--primary-grey);
+      }
+      &-form {
+          padding-bottom: 7px;
+      }
+      &-input {
+          width: $gen-width;
+          height: 54px;
+      }
+      &-button {
+          border: 0;
+          width: 22.875rem;
+          height: 44px;
+          margin-top: 32px;
+          font-family: Josefin Sans;
+          background: var(--light-green);
+          box-shadow: 0px 4px 4px rgba(229, 229, 229, 0.52);
+          border-radius: 5px;
+          color: var( --white-color);
+      }
+      &-form {
+          @include module-display-matrix(flex, column, 0, flex-end, center, null, null);
+          width: 100%;
+      }
+      //media queries
+      @media (max-width: 500px) {
+          &-input {
+              width: 100%;
+          }
+          &-button {
+              width: 100%;
+              justify-content: space-evenly;
+          }
+          &-accountExists {
+              margin-top: 0;
+              width: auto;
+          }
+          &-grid__blue{
+              display: none;
+          }
+          &-grid__white {
+              width: 100vw;
+          }
+          &-AccountNull {
+              text-align: right;
+              margin-top: 0;
+          }
+          &-grid__white {
+              padding: 15px;
+              & .accounts-signIn {
+                  width: 100%;
+                  display: flex;
+                  justify-content: space-between;
+              }
+          }
+      }
+  }

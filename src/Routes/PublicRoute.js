@@ -6,7 +6,7 @@ export const PublicRoute =({ component: Component, path, ...rest}) => {
     <Route
     exact={false}
     {...rest}
-    render={(props) => <Component exact={false} {...props}/>}
+    render={(props) => <Component exact={path} {...props}/>}
     />
    )
 }
