@@ -1,15 +1,13 @@
-import React, {  useState, useContext, useEffect,Fragment } from 'react'
-import { Link, useHistory } from 'react-router-dom'
-// import Popup from '../Popup/Popup'
+import React, {  useState, Fragment } from 'react'
+import { Link } from 'react-router-dom'
 import showPwdImg from '../../assets/svgs/show-password.svg';
 import hidePwdImg from '../../assets/svgs/hide-password.svg';
-import yorubaDrummer from  '../../assets/yorubaDrummer.jpg'
+// import yorubaDrummer from  '../../assets/yorubaDrummer.jpg'
 import Navbar from '../navbar/Navbar';
 
 export const SignUp = () => { 
-    const history = useHistory()
+    // const history = useHistory()
 
-//   const { userSignUp } = automainContext;
   const [ first_name, setFirstName] = useState ("");
   const [ last_name, setLastName] = useState ("");
   const [ mobile_number, setMobile_number] = useState ("");
@@ -26,14 +24,14 @@ export const SignUp = () => {
 //     }, 4000)
 //   }, []);
     
-  const onSubmit = e => {
-      e.preventDefault();
-      const signUpData = {first_name,last_name,mobile_number,email, password1,password2}
-    //   userSignUp(signUpData);
-      setTimeout(() => {
-        // history.push('/login')
-      }, 5000)
-  };
+  // const onSubmit = e => {
+  //     e.preventDefault();
+  //     const signUpData = {first_name,last_name,mobile_number,email, password1,password2}
+  //     userSignUp(signUpData);
+  //     setTimeout(() => {
+  //       history.push('/login')
+  //     }, 5000)
+  // };
   
     return (
         <Fragment>
@@ -46,8 +44,7 @@ export const SignUp = () => {
                         <strong> Login</strong>
                         </Link>
                     </h6>
-              <form className='signin-form' onSubmit={onSubmit}>
-                {/* <h3 className='form-header'>Let’s Get started</h3> */}
+              <form className='signin-form'>
                 <div className='input-field my-1'>
                   <input 
                   type='text' 
@@ -126,11 +123,11 @@ export const SignUp = () => {
                 </form>
                 </section>
                 <section className="">
-                    <img src={yorubaDrummer} 
+                    {/* <img src={yorubaDrummer} 
                     width="228px" 
                     height="228px"
                     alt="sign up slides" 
-                    className="testimonial__image m-10"/>
+                    className="round-img m-2 "/> */}
                 </section>
             </div>
         </Fragment>

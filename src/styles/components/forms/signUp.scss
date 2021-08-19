@@ -38,7 +38,8 @@ $gen-width: 430px;
       }
       &-accountExists {        
           margin-top: 43px;
-          margin-left: 110px;        
+          margin-right: 155px;
+          text-align: right;     
           font-family: Josefin Sans;
           font-size: 14px;
           font-weight: normal;        
@@ -80,12 +81,6 @@ $gen-width: 430px;
               margin-top: 0;
               width: auto;
           }
-          &-grid__blue{
-              display: none;
-          }
-          &-grid__white {
-              width: 100vw;
-          }
           &-AccountNull {
               text-align: right;
               margin-top: 0;
@@ -98,5 +93,8 @@ $gen-width: 430px;
                   justify-content: space-between;
               }
           }
+          .testimonial__image {
+            display: none;
+        }
       }
   }
