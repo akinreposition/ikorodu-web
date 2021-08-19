@@ -10,7 +10,7 @@ import TimedPopup from '../components/Popup'
 import { TimedPopupContent } from '../components/Popup/TimedPopupContent'
 
 const  LandingPage = () => {
-    const [popupState, setState] = useState(false)      // useState should remain true because of the pop info
+    const [popupState, setState] = useState(true);     // useState should remain true because of the pop info
     useEffect(()=> {
         setTimeout(() => {
         setState(false);
