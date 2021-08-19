@@ -1,10 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Backdrop from '../components/features/Backdrop'
+import Navbar from '../components/navbar/Navbar'
 
 const Services = () => {
     return (
         <div>
+            <Navbar />
             <Backdrop />
             <div className='background'>
             <section className='package' id="plus">

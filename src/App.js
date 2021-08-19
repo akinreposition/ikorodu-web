@@ -15,6 +15,7 @@ import NotFound from './pages/NotFound'
 import './App.scss';
 import { SignUp } from './components/forms/SignUp';
 import { Login } from './components/forms/Login';
+import Services from './pages/Services';
 
 const App = () => {
   return(
@@ -30,6 +31,7 @@ const App = () => {
                 })} */}
                 <Route exact path='/' component={LandingPage}/>
                 <Route exact path='/news' component={LocalGossips}/>
+                <Route exact path='/services' component={Services}/>
                 <Route exact path="/lcda" component={LCDA}/>
                 <Route exact path="/contact-us" component={ContactUs}/>
                 <Route exact path='/sign-up' component={SignUp}/>
